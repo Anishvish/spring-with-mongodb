@@ -1,5 +1,5 @@
 # hibernate-crud-operations
-Hibernate traditional way is used for database connect, H2 database is used as database.
+Crud Operation using MongoDb
 
 All the API is well documented using swagger
 
