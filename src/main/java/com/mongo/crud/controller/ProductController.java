@@ -1,5 +1,7 @@
 package com.mongo.crud.controller;
 
+import com.mongo.crud.annotation.AddProduct;
+import com.mongo.crud.annotation.ProductAll;
 import com.mongo.crud.model.Product;
 import com.mongo.crud.model.Response;
 import com.mongo.crud.service.ProductService;
@@ -17,11 +19,13 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @AddProduct
     @PostMapping("addProduct")
     public Response addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
 
+    @ProductAll
     @GetMapping("getAllProducts")
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
